@@ -1,0 +1,50 @@
+# ── Datos da túa instancia — non se soben ──
+# Os valores do teu proxecto de Firebase van en frontend/.env.production.local (e .env.local
+# para "npm run dev"); ver frontend/.env.example e docs/FIREBASE.md.
+# (frontend/.env.production SÍ se sube: só ten URLs públicas do CDN de imaxes.)
+frontend/.env.local
+frontend/.env.*.local
+# Proxecto e caché de Firebase CLI
+.firebaserc
+.firebase/
+
+# ── Backend PHP + MariaDB antigo (v1.x) — substituído por Firebase en v2.0.0 ──
+api/
+
+# ── Backend Node/Docker antiguo ──
+# Se dejan aquí en lugar de borrarlos a mano: así no viajan al repo, pero siguen en tu carpeta
+# por si quieres consultarlos o borrarlos tú mismo más adelante.
+data/
+api/server.js
+api/package.json
+api/package-lock.json
+api/Dockerfile
+api/node_modules/
+docker-compose.yml
+Dockerfile
+nginx.conf
+render.yaml
+web/
+scripts/fetch-media.sh
+website/
+docs/SELF_HOSTING.md
+
+# ── Dependencias y artefactos generados — se recrean con npm install / npm run build ──
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# App móvil (Capacitor) — el proyecto en sí se mantiene en git, pero no sus carpetas de build
+frontend/android/app/build/
+frontend/android/.gradle/
+frontend/android/local.properties
+frontend/ios/Pods/
+frontend/ios/build/
+frontend/ios/DerivedData/
+
+# ── Editor / sistema operativo ──
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
