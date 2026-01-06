@@ -11,6 +11,8 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 
 <br>
 
+![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=flat-square&logo=vite&logoColor=white)
+![React](https://img.shields.io/badge/React-19-38bdf8?style=flat-square&logo=react&logoColor=white)
 
 </div>
 ## Autor
