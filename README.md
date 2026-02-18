@@ -16,6 +16,10 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 ![React](https://img.shields.io/badge/React-19-38bdf8?style=flat-square&logo=react&logoColor=white)
 
 </div>
+## Folla de ruta
+
+- [ ] Instrucións de exercicios en galego (o conxunto de datos orixe aínda non as inclúe; amósanse en inglés mentres tanto)
+
 ## Autor
 
 [Ismael Castiñeira](https://ipardelo.es)
