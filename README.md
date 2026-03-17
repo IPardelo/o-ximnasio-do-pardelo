@@ -19,6 +19,7 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 ## Funcionalidades
 
 - 🏋️ **Plan semanal** — unha rutina por cada día da semana, sobre unha biblioteca de **1.324 exercicios** (con busca, con demostracións animadas)
+- 🔧 **Filtra por equipamento** — reduce a biblioteca ao que realmente tes; as opcións adáptanse ao que xa escolliches, así que toda combinación en pantalla ten resultados detrás
 
 ## Folla de ruta
 
