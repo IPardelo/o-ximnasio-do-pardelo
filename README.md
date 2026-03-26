@@ -19,6 +19,7 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 ## Funcionalidades
 
 - 🏋️ **Plan semanal** — unha rutina por cada día da semana, sobre unha biblioteca de **1.324 exercicios** (con busca, con demostracións animadas)
+- ☀️ **A pantalla mantense acesa mentres adestras** — sen ter que desbloquear o móbil e volver atopar o teu punto entre cada serie. Activa mentres dura o adestramento, libérase no momento en que remata, e pódese desactivar en Axustes
 - 🔧 **Filtra por equipamento** — reduce a biblioteca ao que realmente tes; as opcións adáptanse ao que xa escolliches, así que toda combinación en pantalla ten resultados detrás
 
 ## Folla de ruta
