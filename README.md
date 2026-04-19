@@ -29,6 +29,7 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 
 - [x] Programas de progresión automática (lineal, Greyskull LP, progresión dobre) con estancamentos e descargas (deloads)
 - [x] 1RM estimado por exercicio
+- [ ] Máis plans iniciais (torso/perna, corpo completo, 5×5)
 - [x] Esforzo por serie — RIR ou RPE, a escala coa que penses
 - [ ] Instrucións de exercicios en galego (o conxunto de datos orixe aínda non as inclúe; amósanse en inglés mentres tanto)
 
