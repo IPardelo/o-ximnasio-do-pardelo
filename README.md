@@ -28,6 +28,7 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 - 🎯 **Esforzo por serie, na túa escala** — unha terceira columna opcional que valora o dura que foi unha serie, como **RIR** (repeticións que quedaban) ou **RPE** (o mesmo xuízo nunha escala de 10 puntos). Desactivado por defecto; cada serie conserva a escala coa que se rexistrou, e ningunha outra parte da app le ese valor — a túa progresión e o 1RM non se ven afectados
 - 💪 **Exercicios de peso corporal, rexistrados como tal** — flexións, dominadas, fondos e outros 300 e pico xa saben que non levan carga, así que non hai columna de peso nin aviso de peso de traballo: un só selector, rexistra as repeticións. Engade un cinto de lastre e conta como unha adición, e a progresión volve a seguir o peso. Sen el, as repeticións van subindo — e superado un teito que ti marcas, engádese unha serie en vez dunha repetición, ata o punto en que o máis honesto é engadir carga ou unha variante máis difícil
 - ↔️ **Repeticións por lado** — para zancadas, remo a un brazo e demais. Rexistras o total, a app amosa o reparto ("8 por lado"), e o obxectivo avanza de dous en dous para que nunca caia nun número que un dos lados non poida ter
+- 🏃 **Cardio** — rexistra tempo + velocidade, non só peso × repeticións
 - 🔧 **Filtra por equipamento** — reduce a biblioteca ao que realmente tes; as opcións adáptanse ao que xa escolliches, así que toda combinación en pantalla ten resultados detrás
 
 ## Folla de ruta
