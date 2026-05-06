@@ -30,6 +30,7 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 - ↔️ **Repeticións por lado** — para zancadas, remo a un brazo e demais. Rexistras o total, a app amosa o reparto ("8 por lado"), e o obxectivo avanza de dous en dous para que nunca caia nun número que un dos lados non poida ter
 - 🏃 **Cardio** — rexistra tempo + velocidade, non só peso × repeticións
 - 🔧 **Filtra por equipamento** — reduce a biblioteca ao que realmente tes; as opcións adáptanse ao que xa escolliches, así que toda combinación en pantalla ten resultados detrás
+- ✨ **Os teus propios exercicios** — abonda cun nome e unha parte do corpo; compórtanse igual que os incorporados en todas partes, cunha descrición opcional no canto dunha animación
 
 ## Folla de ruta
 
