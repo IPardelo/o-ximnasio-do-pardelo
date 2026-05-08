@@ -19,6 +19,7 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 ## Funcionalidades
 
 - 🏋️ **Plan semanal** — unha rutina por cada día da semana, sobre unha biblioteca de **1.324 exercicios** (con busca, con demostracións animadas)
+- 🗓️ **Reprograma calquera día** — ¿enfermaches, faltaches a unha sesión, ou tes menos días de ximnasio esta semana? Move un adestramento a outro día sen tocar o teu plan semanal
 - ▶️ **Adestramentos guiados** — sabe que día é e inicia a sesión de hoxe; pregunta primeiro o teu peso corporal, precarga os teus pesos da última vez, temporizador de descanso, detección de récords persoais, seguimento de peso por exercicio
 - ☀️ **A pantalla mantense acesa mentres adestras** — sen ter que desbloquear o móbil e volver atopar o teu punto entre cada serie. Activa mentres dura o adestramento, libérase no momento en que remata, e pódese desactivar en Axustes
 - 🔗 **Superseries** — créaas, e rexístraas unha detrás doutra cun descanso só despois da parella
