@@ -18,6 +18,7 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 </div>
 ## Funcionalidades
 
+- ⚖️ **Rexistro do peso corporal** — gráfica interactiva cunha liña de obxectivo que ti defines, gañancias/perdas coloreadas segundo se achegan ou non a ese obxectivo
 - 🏋️ **Plan semanal** — unha rutina por cada día da semana, sobre unha biblioteca de **1.324 exercicios** (con busca, con demostracións animadas)
 - 🗓️ **Reprograma calquera día** — ¿enfermaches, faltaches a unha sesión, ou tes menos días de ximnasio esta semana? Move un adestramento a outro día sen tocar o teu plan semanal
 - ▶️ **Adestramentos guiados** — sabe que día é e inicia a sesión de hoxe; pregunta primeiro o teu peso corporal, precarga os teus pesos da última vez, temporizador de descanso, detección de récords persoais, seguimento de peso por exercicio
