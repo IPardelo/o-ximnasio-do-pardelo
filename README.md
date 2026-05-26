@@ -34,6 +34,7 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 - 🔧 **Filtra por equipamento** — reduce a biblioteca ao que realmente tes; as opcións adáptanse ao que xa escolliches, así que toda combinación en pantalla ten resultados detrás
 - ✨ **Os teus propios exercicios** — abonda cun nome e unha parte do corpo; compórtanse igual que os incorporados en todas partes, cunha descrición opcional no canto dunha animación
 - 🟩 **Mapa de calor de actividade** — unha vista anual ao estilo GitHub, sombreada polo tempo adicado a adestrar
+- 💪 **Mapa muscular** — un diagrama do corpo de fronte e de costas, sombreado segundo o traballo que recibiu cada músculo, nunha semana, un mes ou todo o historial. Indica os músculos que *non* traballaches nese período, mostra unha vista previa do que traballa unha rutina mentres a creas, e amosa o que acabas de traballar ao rematar. Figura masculina ou feminina, ao teu gusto
 
 ## Folla de ruta
 
