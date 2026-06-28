@@ -52,6 +52,11 @@ npm run build        # xera frontend/dist/ — o que subes ao aloxamento
 npm test             # probas da lóxica de adestramento (Vitest)
 ```
 
+### 📄 Aloxamento estático
+
+Se non queres ningún servizo externo, a app tamén compila sen Firebase: todos os datos quedan no
+navegador, sen contas nin sincronización.
+
 ## Folla de ruta
 
 - [x] Programas de progresión automática (lineal, Greyskull LP, progresión dobre) con estancamentos e descargas (deloads)
