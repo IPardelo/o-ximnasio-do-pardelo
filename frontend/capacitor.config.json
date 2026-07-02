@@ -1,0 +1,9 @@
+{
+  "appId": "es.ipardelo.ximnasio",
+  "appName": "O Ximnasio do Pardelo",
+  "webDir": "dist",
+  "backgroundColor": "#0c0e12",
+  "android": {
+    "allowMixedContent": false
+  }
+}
