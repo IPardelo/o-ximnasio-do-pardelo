@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">O Ximnasio do Pardelo</string>
+    <string name="title_activity_main">O Ximnasio do Pardelo</string>
+    <string name="package_name">es.ipardelo.ximnasio</string>
+    <string name="custom_url_scheme">es.ipardelo.ximnasio</string>
+</resources>
