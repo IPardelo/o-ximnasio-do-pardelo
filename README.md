@@ -57,6 +57,35 @@ npm test             # probas da lóxica de adestramento (Vitest)
 Se non queres ningún servizo externo, a app tamén compila sen Firebase: todos os datos quedan no
 navegador, sen contas nin sincronización.
 
+## Estrutura xeral
+
+```
+o-ximnasio-do-pardelo/
+├── frontend/                   # App React + Vite
+│   ├── src/
+│   │   ├── views/              # Pantallas: Home, Workout, Plan, Stats, Nutrition,
+│   │   │                       #   Library, History, Settings, Login, Admin…
+│   │   ├── components/         # UI reutilizable: BodyMap, Heatmap, LineChart,
+│   │   │                       #   RestTimer, BarcodeScanner, TabBar…
+│   │   ├── lib/                # Lóxica pura + probas: progression, onerm, effort,
+│   │   │                       #   history, nutrition, import-csv, plan-share, i18n…
+│   │   ├── store/              # Estado global (Zustand): useStore, useUI
+│   │   ├── locales/            # Traducións da interface (gl, es)
+│   │   ├── instr/              # Instrucións de exercicios (es; gl e en usan o inglés)
+│   │   ├── sheets.jsx          # Follas modais de adestramento
+│   │   └── nutrition-sheets.jsx
+│   ├── public/                 # manifest.json, service worker, iconas
+│   ├── dist/                   # Compilación lista para subir (xerada)
+│   ├── android/ · ios/         # Proxectos nativos de Capacitor
+│   └── vite.config.js
+│
+├── assets/                     # Banner e capturas de pantalla
+└── docs/
+    ├── FIREBASE.md             # Despregamento con Firebase
+    ├── STATIC_HOSTING.md       # Versión só local, sen contas
+    └── MOBILE.md               # Compilar a app de Android / iOS
+```
+
 ## Folla de ruta
 
 - [x] Programas de progresión automática (lineal, Greyskull LP, progresión dobre) con estancamentos e descargas (deloads)
