@@ -16,6 +16,17 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 ![React](https://img.shields.io/badge/React-19-38bdf8?style=flat-square&logo=react&logoColor=white)
 
 </div>
+
+<br>
+
+<div align="center">
+<table>
+<tr>
+<td align="center"><img src="assets/screenshots/home.png" alt="Inicio" width="230"><br><sub><b>Inicio</b> — adestramento e peso de hoxe</sub></td>
+</tr>
+</table>
+</div>
+
 ## Funcionalidades
 
 - ⚖️ **Rexistro do peso corporal** — gráfica interactiva cunha liña de obxectivo que ti defines, gañancias/perdas coloreadas segundo se achegan ou non a ese obxectivo
