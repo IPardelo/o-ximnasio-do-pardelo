@@ -24,6 +24,7 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 <tr>
 <td align="center"><img src="assets/screenshots/home.png" alt="Inicio" width="230"><br><sub><b>Inicio</b> — adestramento e peso de hoxe</sub></td>
 <td align="center"><img src="assets/screenshots/workout.png" alt="Adestramento" width="230"><br><sub><b>Adestramento guiado</b> — demostracións animadas e series</sub></td>
+<td align="center"><img src="assets/screenshots/stats.png" alt="Estatísticas" width="230"><br><sub><b>Estatísticas</b> — mapa de calor, gráficas e récords persoais</sub></td>
 </tr>
 </table>
 </div>
