@@ -14,6 +14,9 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 ![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![PWA](https://img.shields.io/badge/PWA-installable-a78bfa?style=flat-square)
 ![React](https://img.shields.io/badge/React-19-38bdf8?style=flat-square&logo=react&logoColor=white)
+![Version](https://img.shields.io/github/package-json/v/IPardelo/o-ximnasio-do-pardelo?style=flat-square&filename=frontend%2Fpackage.json&color=a3e635)
+![Repo size](https://img.shields.io/github/repo-size/IPardelo/o-ximnasio-do-pardelo?style=flat-square)
+![Self-hosted](https://img.shields.io/badge/self--hosted-%F0%9F%8F%A0-60a5fa?style=flat-square)
 
 </div>
 
