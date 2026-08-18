@@ -106,9 +106,11 @@ o-ximnasio-do-pardelo/
 
 - [x] Programas de progresión automática (lineal, Greyskull LP, progresión dobre) con estancamentos e descargas (deloads)
 - [x] 1RM estimado por exercicio
+- [ ] Programación por porcentaxes / training-max (estilo 5/3/1) sobre o motor de progresión
 - [ ] Máis plans iniciais (torso/perna, corpo completo, 5×5)
 - [x] Importadores desde FitNotes / Strong / Hevy (incluíndo o RPE que rexistran), e peso corporal desde Apple Health
 - [x] Esforzo por serie — RIR ou RPE, a escala coa que penses
+- [ ] Medidas corporais (cintura, brazos…) xunto ao peso
 - [ ] Instrucións de exercicios en galego (o conxunto de datos orixe aínda non as inclúe; amósanse en inglés mentres tanto)
 
 ## Autor
