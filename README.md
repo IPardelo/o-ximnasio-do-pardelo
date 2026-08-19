@@ -102,6 +102,26 @@ o-ximnasio-do-pardelo/
     └── MOBILE.md               # Compilar a app de Android / iOS
 ```
 
+## Evolución por versión
+
+### v1.0.0
+
+- Base do rastrexador de adestramento: **plan semanal** cunha rutina por día, sobre unha biblioteca de 1.324 exercicios con busca, demostracións animadas e filtro por equipamento.
+- **Adestramentos guiados**: sesión do día, precarga dos pesos anteriores, temporizador de descanso, detección de récords persoais e reprogramación de calquera día sen tocar o plan.
+- Tipos de serie completos: superseries, exercicios cronometrados (con temporizador de traballo propio), peso corporal (con lastre opcional), repeticións por lado e cardio (tempo + velocidade).
+- **Progresión automática por regra** — lineal, Greyskull LP, progresión dobre e por tempo — con estancamentos, descargas (deloads) e anulación por exercicio.
+- **1RM estimado** por exercicio, con curva de progreso e calculadora; **esforzo por serie** opcional en escala RIR ou RPE.
+- **Rexistro do peso corporal** con gráfica interactiva e liña de obxectivo.
+- **Estatísticas**: mapa de calor anual de actividade, mapa muscular (fronte/costas) por semana, mes ou historial, e gráficas de progreso.
+- Exercicios propios creados polo usuario, importadores desde FitNotes / Strong / Hevy e peso corporal desde Apple Health.
+- **Compartir plans** nun ficheiro lixeiro ou en PDF, con importación por fusión; exportación/importación JSON completa e modo convidado.
+- **Inicio de sesión** con Google ou usuario/contrasinal, perfís independentes sincronizados entre dispositivos e código de invitación rotable.
+- **Panel de administración**: quen adestra agora, historial por usuario, desactivar contas e xestión do código de invitación.
+- **Notificacións push** de descanso e recordatorio de adestramento pendente, activables por perfil.
+- Autoaloxamento en hosting PHP + MariaDB compartido (sen Docker, sen Node no servidor, sen shell), con configuración na base de datos.
+- **App móbil independente** (Capacitor) para Android/iOS: sen conta nin servidor, datos locais, recordatorios nativos e copias de seguridade polo menú de compartir.
+- Sen telemetría. Lóxica de adestramento en funcións puras con probas (Vitest).
+
 ## Folla de ruta
 
 - [x] Programas de progresión automática (lineal, Greyskull LP, progresión dobre) con estancamentos e descargas (deloads)
