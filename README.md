@@ -47,6 +47,7 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 - 💪 **Exercicios de peso corporal, rexistrados como tal** — flexións, dominadas, fondos e outros 300 e pico xa saben que non levan carga, así que non hai columna de peso nin aviso de peso de traballo: un só selector, rexistra as repeticións. Engade un cinto de lastre e conta como unha adición, e a progresión volve a seguir o peso. Sen el, as repeticións van subindo — e superado un teito que ti marcas, engádese unha serie en vez dunha repetición, ata o punto en que o máis honesto é engadir carga ou unha variante máis difícil
 - ↔️ **Repeticións por lado** — para zancadas, remo a un brazo e demais. Rexistras o total, a app amosa o reparto ("8 por lado"), e o obxectivo avanza de dous en dous para que nunca caia nun número que un dos lados non poida ter
 - 🏃 **Cardio** — rexistra tempo + velocidade, non só peso × repeticións
+- 🥗 **Alimentación** — rexistra o que comes por Almorzo/Xantar/Cea/Snacks, cunha busca instantánea sobre a túa propia biblioteca de alimentos e receitas creadas por ti; escanea o código de barras dun produto coa cámara do móbil para atopalo ao instante. Cada rexistro garda a súa propia cantidade e unidade (gramos, onzas, cuncas...), cos macros recalculados en tempo real. Un panel diario amosa as calorías restantes fronte ao teu obxectivo (consumidas menos queimadas por exercicio, que rexistras á man) e o progreso de proteína, hidratos e graxas en barras — todo sincronizado coma o resto dos teus datos, sen depender de ningunha API externa
 - 📤 **Comparte un plan** — envía a alguén as túas rutinas e o horario semanal nun ficheiro pequeno (sen adestramentos nin pesaxes), ou imprímeo como un PDF limpo. Importar fai unha fusión, así que o plan de quen o recibe nunca se sobrescribe
 - 🔧 **Filtra por equipamento** — reduce a biblioteca ao que realmente tes; as opcións adáptanse ao que xa escolliches, así que toda combinación en pantalla ten resultados detrás
 - ✨ **Os teus propios exercicios** — abonda cun nome e unha parte do corpo; compórtanse igual que os incorporados en todas partes, cunha descrición opcional no canto dunha animación
@@ -131,6 +132,7 @@ o-ximnasio-do-pardelo/
 - [x] Importadores desde FitNotes / Strong / Hevy (incluíndo o RPE que rexistran), e peso corporal desde Apple Health
 - [x] Esforzo por serie — RIR ou RPE, a escala coa que penses
 - [ ] Medidas corporais (cintura, brazos…) xunto ao peso
+- [x] Control de alimentación
 - [ ] Instrucións de exercicios en galego (o conxunto de datos orixe aínda non as inclúe; amósanse en inglés mentres tanto)
 
 ## Autor
