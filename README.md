@@ -105,6 +105,9 @@ o-ximnasio-do-pardelo/
 
 ## Evolución por versión
 
+### v1.1.0
+- Módulo de **alimentación**: rexistro por comidas, biblioteca propia de alimentos e receitas, escáner de códigos de barras, panel diario de calorías e macros.
+
 ### v1.0.0
 
 - Base do rastrexador de adestramento: **plan semanal** cunha rutina por día, sobre unha biblioteca de 1.324 exercicios con busca, demostracións animadas e filtro por equipamento.
