@@ -1,0 +1,113 @@
+rules_version = '2';
+
+// O Ximnasio do Pardelo — Firestore security rules. With no server of our own, these ARE the
+// backend's access control: deploy them from this folder (firebase/) with
+// `firebase deploy --only firestore:rules`, or paste this file into Firebase console →
+// Firestore Database → Rules → Publish.
+//
+//   users/{uid}               profile — the owner reads it; admins read and list all
+//   users/{uid}/state/{part}  synced app state (meta + p0..pN) — owner only, admins read
+//   presence/{uid}            "training now" heartbeat — owner writes, admins read
+//   config/invite             { code } — the shared invite code, admins only
+//   config/setup              { owner, at } — exists once the first account (the first admin)
+//                             has been created; anyone may read it, nobody may change it
+//
+// A Firebase Auth account alone grants nothing: everything below needs a profile document,
+// and creating one needs the current invite code. The one exception is the very first account:
+// while config/setup does not exist, a profile may be created with admin == true and no invite
+// code, in the same batch that creates config/setup — so exactly one account can ever do this.
+// Any other admin is users/{uid}.admin == true, set by hand in the Firebase console.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function profilePath(uid) { return /databases/$(database)/documents/users/$(uid); }
+    function profile(uid) { return get(profilePath(uid)).data; }
+    function isMember() {
+      return signedIn() && exists(profilePath(request.auth.uid)) && profile(request.auth.uid).disabled != true;
+    }
+    function isAdmin() { return isMember() && profile(request.auth.uid).admin == true; }
+    function isOwner(uid) { return isMember() && request.auth.uid == uid; }
+
+    match /config/invite {
+      allow read, write: if isAdmin();
+    }
+
+    // Created together with the first profile (see users/{uid} create below), or by an existing
+    // admin to close the first-account path on an instance whose admin was set up by hand.
+    match /config/setup {
+      allow get: if true;
+      allow create: if signedIn()
+        && request.resource.data.keys().hasOnly(['owner', 'at'])
+        && request.resource.data.owner == request.auth.uid
+        && request.resource.data.at == request.time
+        && (isAdmin()
+            || (existsAfter(profilePath(request.auth.uid))
+                && getAfter(profilePath(request.auth.uid)).data.admin == true));
+      allow update, delete: if false;
+    }
+
+    match /users/{uid} {
+      // The owner may read their profile even when disabled or before it exists, so the app
+      // can tell "no profile yet" and "disabled" apart from a network error.
+      allow get: if (signedIn() && request.auth.uid == uid) || isAdmin();
+      allow list: if isAdmin();
+
+      allow create: if signedIn() && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['name', 'email', 'provider', 'admin', 'disabled', 'sessionVer',
+             'invitedBy', 'createdAt', 'lastSync', 'workouts', 'lastWorkout'])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 40
+        && request.resource.data.provider in ['password', 'google']
+        && request.resource.data.email == request.auth.token.get('email', null)
+        && request.resource.data.disabled == false
+        && request.resource.data.sessionVer == 0
+        && request.resource.data.createdAt == request.time
+        && (
+          // everyone else: a regular account, with the current invite code
+          (request.resource.data.admin == false
+            && exists(/databases/$(database)/documents/config/invite)
+            && request.resource.data.invitedBy == get(/databases/$(database)/documents/config/invite).data.code)
+          ||
+          // the very first account: admin, no invite, and it claims config/setup in the same batch
+          (request.resource.data.admin == true
+            && request.resource.data.invitedBy == null
+            && !exists(/databases/$(database)/documents/config/setup)
+            && existsAfter(/databases/$(database)/documents/config/setup)
+            && getAfter(/databases/$(database)/documents/config/setup).data.owner == request.auth.uid)
+        );
+
+      allow update: if
+        // the owner: sync summary, display name, and "sign out everywhere" (only ever upwards)
+        (isOwner(uid)
+          && request.resource.data.diff(resource.data).affectedKeys()
+               .hasOnly(['name', 'lastSync', 'workouts', 'lastWorkout', 'sessionVer'])
+          && request.resource.data.name is string
+          && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 40
+          && request.resource.data.sessionVer >= resource.data.sessionVer)
+        ||
+        // an admin: enable/disable another, non-admin account
+        (isAdmin() && request.auth.uid != uid && resource.data.admin != true
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['disabled'])
+          && request.resource.data.disabled is bool);
+
+      allow delete: if false;
+
+      match /state/{part} {
+        allow read: if isOwner(uid) || isAdmin();
+        allow delete: if isOwner(uid) && part.matches('p[0-9]+');
+        // A device whose session was ended elsewhere ("sign out everywhere") still holds the old
+        // version and can no longer overwrite the profile's data.
+        allow create, update: if isOwner(uid)
+          && (part.matches('p[0-9]+')
+              || (part == 'meta' && request.resource.data.ver == profile(uid).sessionVer));
+      }
+    }
+
+    match /presence/{uid} {
+      allow read: if isAdmin();
+      allow create, update: if isOwner(uid);
+      allow delete: if isOwner(uid) || isAdmin();
+    }
+  }
+}
