@@ -12,6 +12,7 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 <br>
 
 ![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-DD2C00?style=flat-square&logo=firebase&logoColor=white)
 ![PWA](https://img.shields.io/badge/PWA-installable-a78bfa?style=flat-square)
 ![React](https://img.shields.io/badge/React-19-38bdf8?style=flat-square&logo=react&logoColor=white)
 ![Version](https://img.shields.io/github/package-json/v/IPardelo/o-ximnasio-do-pardelo?style=flat-square&filename=frontend%2Fpackage.json&color=a3e635)
@@ -31,6 +32,15 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 </tr>
 </table>
 </div>
+
+## Por que
+
+A maioría das apps de adestramento bloquean os teus datos detrás dun inicio de sesión nos seus
+servidores, insisten en que actualices a un plan de pago, ou desaparecen cando a startup pecha.
+'O Ximnasio do Pardelo' é o contrario: **sóbela onde queiras, os teus datos quedan no teu propio
+proxecto de Firebase, e é teu para modificalo (fork).** Aínda así resulta moderno — instalable
+como app de pantalla de inicio, inicio de sesión con Google ou correo, funcionamento sen
+conexión, sincronización entre o teu móbil e o portátil.
 
 ## Funcionalidades
 
@@ -60,6 +70,7 @@ corporal ao longo do tempo. Sen servidor que manter, sen subscrición, sen anunc
 
 | Requisito | Detalle |
 |---|---|
+| **Un proxecto de Firebase** | Plan gratuíto (Spark): Authentication + Cloud Firestore. Sen tarxeta |
 | **Calquera aloxamento web con HTTPS** | Só serve ficheiros: hosting compartido, GitHub Pages, Netlify, Firebase Hosting… |
 
 ```bash
@@ -68,6 +79,10 @@ npm install
 npm run build        # xera frontend/dist/ — o que subes ao aloxamento
 npm test             # probas da lóxica de adestramento (Vitest)
 ```
+
+### 🔥 Firebase
+
+A forma recomendada: crear un proxecto de Firebase, pegar as regras de `firebase/firestore.rules`, poñer os catro valores do proxecto en `frontend/.env.production.local`, compilar e subir `frontend/dist/`.
 
 ### 📄 Aloxamento estático
 
@@ -78,6 +93,10 @@ navegador, sen contas nin sincronización.
 
 ```
 o-ximnasio-do-pardelo/
+├── firebase/
+│   ├── firestore.rules         # Control de acceso de Firestore (o "backend")
+│   └── firebase.json           # Para despregar as regras con Firebase CLI (desde este cartafol)
+│
 ├── frontend/                   # App React + Vite
 │   ├── src/
 │   │   ├── views/              # Pantallas: Home, Workout, Plan, Stats, Nutrition,
@@ -86,6 +105,7 @@ o-ximnasio-do-pardelo/
 │   │   │                       #   RestTimer, BarcodeScanner, TabBar…
 │   │   ├── lib/                # Lóxica pura + probas: progression, onerm, effort,
 │   │   │                       #   history, nutrition, import-csv, plan-share, i18n…
+│   │   │                       #   firebase.js — contas, sincronización e admin
 │   │   ├── store/              # Estado global (Zustand): useStore, useUI
 │   │   ├── locales/            # Traducións da interface (gl, es)
 │   │   ├── instr/              # Instrucións de exercicios (es; gl e en usan o inglés)
@@ -94,6 +114,7 @@ o-ximnasio-do-pardelo/
 │   ├── public/                 # manifest.json, service worker, iconas
 │   ├── dist/                   # Compilación lista para subir (xerada)
 │   ├── android/ · ios/         # Proxectos nativos de Capacitor
+│   ├── .env.example            # Valores do proxecto de Firebase (copiar a .env.production.local)
 │   └── vite.config.js
 │
 ├── assets/                     # Banner e capturas de pantalla
@@ -102,6 +123,11 @@ o-ximnasio-do-pardelo/
     ├── STATIC_HOSTING.md       # Versión só local, sen contas
     └── MOBILE.md               # Compilar a app de Android / iOS
 ```
+
+A lóxica de adestramento — regras de progresión, estimación do 1RM, como se le de volta unha
+sesión rexistrada — vive en funcións puras baixo `frontend/src/lib/`, con probas ao seu carón
+(`npm test`). A app en si non ten máis dependencias en tempo de execución que React, o router,
+Zustand e o SDK de Firebase (que só se descarga se a compilación ten un proxecto configurado).
 
 ## Evolución por versión
 
