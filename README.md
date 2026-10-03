@@ -95,6 +95,13 @@ A forma recomendada: crear un proxecto de Firebase, pegar as regras de `firebase
 Se non queres ningún servizo externo, a app tamén compila sen Firebase: todos os datos quedan no
 navegador, sen contas nin sincronización.
 
+### 📱 App móbil
+
+O mesmo código tamén compila unha **app móbil** (Capacitor) que usa o mesmo proxecto de
+Firebase: inicias sesión co teu correo e tes os mesmos datos ca na web, cunha copia no propio
+móbil para funcionar sen conexión, recordatorios nativos os días de adestramento e copias de
+seguridade a través do menú de compartir.
+
 ## Estrutura xeral
 
 ```
