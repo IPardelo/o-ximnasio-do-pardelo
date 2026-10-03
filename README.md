@@ -84,6 +84,12 @@ npm test             # probas da lóxica de adestramento (Vitest)
 
 A forma recomendada: crear un proxecto de Firebase, pegar as regras de `firebase/firestore.rules`, poñer os catro valores do proxecto en `frontend/.env.production.local`, compilar e subir `frontend/dist/`.
 
+> [!IMPORTANT]
+> **O primeiro usuario que se crea é administrador automaticamente**, sen código de invitación.
+> A app xera nese momento o código de invitación, que se ve e se cambia desde o panel de
+> administración; o resto de contas necesítao para rexistrarse. Crea a túa conta xusto despois
+> de subir a app: mentres non haxa ningunha, quen entre primeiro queda como administrador.
+
 ### 📄 Aloxamento estático
 
 Se non queres ningún servizo externo, a app tamén compila sen Firebase: todos os datos quedan no
