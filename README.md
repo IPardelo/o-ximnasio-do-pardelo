@@ -144,6 +144,14 @@ Zustand e o SDK de Firebase (que só se descarga se a compilación ten un proxec
 
 ## Evolución por versión
 
+### v2.0.0
+- **Adeus ao backend PHP + MariaDB**: contas, sincronización e panel de administración pasan a **Firebase** (Authentication + Cloud Firestore), chamado directamente desde o navegador. A app compílase a ficheiros estáticos e funciona en **calquera aloxamento web**, sen servidor que manter, dentro do plan gratuíto de Firebase.
+- O control de acceso vive en `firebase/firestore.rules`: perfís con código de invitación, a primeira conta creada pasa a ser administradora (o resto, desde a consola), contas desactivables e "pechar sesión en todos os dispositivos".
+- Inicio de sesión con **correo** en vez de nome de usuario, con **recuperación de contrasinal**; Google segue igual, sen ter que configurar un ID de cliente.
+- A **app móbil** tamén pasa a Firebase: conta obrigatoria (correo/contrasinal), os mesmos perfís e datos ca na web, e mantén a copia local no móbil e os recordatorios nativos.
+- As notificacións push do servidor substitúense por un **aviso local de fin do descanso**; o recordatorio diario queda só na app móbil.
+- Guía nova: [docs/FIREBASE.md](docs/FIREBASE.md). Sen migración de datos desde a v1 (exportación/importación JSON se fai falta).
+
 ### v1.1.0
 - Módulo de **alimentación**: rexistro por comidas, biblioteca propia de alimentos e receitas, escáner de códigos de barras, panel diario de calorías e macros.
 
