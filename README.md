@@ -145,6 +145,9 @@ Zustand e o SDK de Firebase (que só se descarga se a compilación ten un proxec
 
 ## Evolución por versión
 
+### v2.1.1
+- Internacionalización do menú de administración.
+
 ### v2.1.0
 - **Aviso de fin do descanso na app de Android**: notificación nativa programada no móbil, que chega aínda coa app pechada; reprográmase co ±15 s e cancélase ao saltar o descanso. Actívase en Axustes → Notificacións.
 - A busca de alimentos ordena mellor os empates (primeiro a coincidencia máis próxima ao inicio do nome).
