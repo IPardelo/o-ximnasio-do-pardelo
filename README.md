@@ -145,6 +145,10 @@ Zustand e o SDK de Firebase (que só se descarga se a compilación ten un proxec
 
 ## Evolución por versión
 
+### v2.1.0
+- **Aviso de fin do descanso na app de Android**: notificación nativa programada no móbil, que chega aínda coa app pechada; reprográmase co ±15 s e cancélase ao saltar o descanso. Actívase en Axustes → Notificacións.
+- A busca de alimentos ordena mellor os empates (primeiro a coincidencia máis próxima ao inicio do nome).
+
 ### v2.0.0
 - **Adeus ao backend PHP + MariaDB**: contas, sincronización e panel de administración pasan a **Firebase** (Authentication + Cloud Firestore), chamado directamente desde o navegador. A app compílase a ficheiros estáticos e funciona en **calquera aloxamento web**, sen servidor que manter, dentro do plan gratuíto de Firebase.
 - O control de acceso vive en `firebase/firestore.rules`: perfís con código de invitación, a primeira conta creada pasa a ser administradora (o resto, desde a consola), contas desactivables e "pechar sesión en todos os dispositivos".
